@@ -6,11 +6,14 @@ namespace AndreFirstMVC.Controllers
     public class HelloWorldController : Controller
     {
 
+        DogViewModel dogForm = null;
 
-        public IActionResult Index()
+        public IActionResult Index(DogViewModel dogForm)
         {
-            DogViewModel AndreDog = new DogViewModel() { Name = "Bruno", Age = 3 };
-            return View(AndreDog);
+            // DogViewModel AndreDog = new DogViewModel() { Name = "Bruno", Age = 3 };
+
+            // return View(AndreDog);
+            return View(dogForm);
         }
 
         public IActionResult Create()
